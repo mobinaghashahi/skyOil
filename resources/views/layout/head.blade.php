@@ -18,6 +18,11 @@
                     ورود
                 </a>
             </li>
+            <li>
+                <a href="/login" style="color: #d50000">
+                    خروج
+                </a>
+            </li>
         </ul>
     </div>
     <div class="col-8" style="float: right;width: 66.66%">
