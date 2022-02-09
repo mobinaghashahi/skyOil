@@ -9,7 +9,7 @@
     <div class="col-4" style="float: right;width: 33.33%">
         <ul>
             <li>
-                <a href="index" style="padding: 10px 10px 10px 7px;">
+                <a href="/" style="padding: 10px 10px 10px 7px;">
                     <img src="/image/69524.png" width="25px" height="25px">
                 </a>
             </li>
