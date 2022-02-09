@@ -37,6 +37,22 @@
     padding : 10px 0px 20px 0px;
     background-color: #1a202c;
 }
+.submit{
+    width: 45%;
+    height: 40px;
+    border-radius: 5px;
+}
+.loginFrame{
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(#717c89,#2d3748);
+    padding: 30px;
+    border-radius: 50px;
+}
+.labal{
+    text-align: center;
+    margin: 0px 0px 10px 0px;
+}
 .col-1{width:8.33%;}
 .col-2{width:16.66%;}
 .col-3{width:25%;}
