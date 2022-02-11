@@ -13,6 +13,18 @@
     text-decoration: none;
     color: white;
 }
+a{
+    text-decoration: none;
+    color: white;
+}
+.dashboardBox{
+    background-color: #2d3748;
+    color:white;
+    text-align: center;
+    padding: 10px 0px 10px 0px;
+    margin:80px 0px 80px 0px;
+    border-radius: 50px;
+}
 .nav{
     background-color: #1a202c;
 }
@@ -72,9 +84,9 @@
 @media only screen and (max-width:1086px) {
     [class*="col-"] {
         float: left;
-        padding: 0px;
     }
     [class*="col-"]{
         width : 100%;
     }
+
 }
