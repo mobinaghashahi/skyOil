@@ -7,21 +7,24 @@
         <div class="col-12" style="display: flex;justify-content: center;margin:65px 0px 65px 0px;">
             <div class="col-3"
                  style="display: flex;justify-content: center;background-image: linear-gradient(#717c89,#2d3748);padding: 30px;border-radius: 50px">
-                <form method="post" name="enter" action="validation.php">
-                    <div class="col-12" style="text-align: center;margin: 0px 0px 15px 0px;">
-                        نام کاربری
+                <form method="post" name="enter" action="/login">
+                    @csrf
+                    <div>
+                        @if ($errors->any())
+                            @foreach($errors->all() as $error)
+                                <p style="color: #950202;text-align: center;background-color: #d2be0a">{{$error}}</p>
+                            @endforeach
+                        @endif
                     </div>
-                    <div class="col-12" style="display: flex;justify-content: center">
-                        <input class="input" name="username" type="email">
-                    </div>
-                    <div class="col-12" style="text-align: center;margin: 5px 0px 10px 0px">
-                        رمز عبور
+                    <div class="col-12" style="display: flex;justify-content: center;margin: 30px 0px 10px 0px;">
+                        <input class="input" name="email" placeholder="ایمیل" type="email" style="text-align: center">
                     </div>
                     <div class="col-12" style="display: flex;justify-content: center;margin: 0px 0px 20px 0px">
-                        <input class="input" name="password" type="password">
+                        <input type="password" placeholder="رمز عبور" id="password" name="password" style="text-align: center;margin: 10px 0px 10px 0px;">
                     </div>
                     <div class="col-12" style="display: flex;justify-content: center;margin: 20px 0px 20px 0px">
-                        <input style="width: 45%;height: 40px;border-radius: 5px" name="enter" type="submit" value="ورود">
+                        <input style="width: 45%;height: 40px;border-radius: 5px" name="enter" type="submit"
+                               value="ورود">
                     </div>
                 </form>
             </div>
