@@ -21,7 +21,7 @@
             </li>
             @else
                 <li>
-                    <a href="/">
+                    <a href="/dashboard">
                         <img src="/image/dashboard.png" width="25px" height="25px">
                     </a>
                 </li>
