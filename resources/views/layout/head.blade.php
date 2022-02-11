@@ -9,15 +9,28 @@
     <div class="col-4" style="float: right;width: 33.33%">
         <ul>
             <li>
-                <a href="/" style="padding: 10px 10px 10px 7px;">
+                <a href="/"  style="padding: 0px 0px 0px 0px;">
                     <img src="/image/69524.png" width="25px" height="25px">
                 </a>
             </li>
+            @if(!Auth::check())
             <li>
                 <a href="/login">
                     ورود
                 </a>
             </li>
+            @else
+                <li>
+                    <a href="/">
+                        <img src="/image/dashboard.png" width="25px" height="25px">
+                    </a>
+                </li>
+            <li>
+                <a href="/logout" style="color: #d20a0a">
+                    خروج
+                </a>
+            </li>
+            @endif
         </ul>
     </div>
     <div class="col-8" style="float: right;width: 66.66%">
