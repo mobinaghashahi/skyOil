@@ -21,8 +21,8 @@ class CreateCustomer extends Migration
             $table->string('carTag');
             $table->string('phoneNumber',11);
             $table->string('carType');
-            $table->timestamp('dateChangeOil')->nullable();
-            $table->timestamp('expirationDay')->nullable();
+            $table->string('dateChangeOil')->nullable();
+            $table->string('expirationDay')->nullable();
             $table->timestamps();
         });
     }
