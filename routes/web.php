@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\loginController;
 use App\Http\Controllers\Dashboard;
+use App\Http\Controllers\admin;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,3 +22,8 @@ Route::get('/login',[loginController::class, 'viewLoginForm'])->middleware(['gue
 Route::post('/login',[loginController::class, 'login']);
 
 Route::get('/dashboard',[Dashboard::class,'viewDashboard'])->middleware('auth');
+
+Route::prefix('/admin')->group(function () {
+    Route::get('/addCustomer',[admin::class,'showAddCostumerForm']);
+    Route::post('/addCustomer',[admin::class,'addCostumer']);
+});
