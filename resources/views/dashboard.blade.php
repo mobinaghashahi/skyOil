@@ -28,10 +28,11 @@
             </div>
             <div class="col-4" style="display: flex;justify-content: center;">
                 <div class="col-10 dashboardBox">
+                    <a class="" href="/admin/addCustomer">
                     <div class="col-12" style="display: flex;justify-content: center">
                         <img src="image/addPerson.png" width="30" height="30">
                     </div>
-                    <a class="" href="/">اضاف کردن مشتری</a>
+                    افزودن مشتری جدید</a>
                 </div>
             </div>
         </div>
