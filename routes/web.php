@@ -23,7 +23,11 @@ Route::post('/login',[loginController::class, 'login']);
 
 Route::get('/dashboard',[Dashboard::class,'viewDashboard'])->middleware('auth');
 
-Route::prefix('/admin')->group(function () {
+Route::prefix('/admin')->middleware('auth')->group(function () {
     Route::get('/addCustomer',[admin::class,'showAddCostumerForm']);
     Route::post('/addCustomer',[admin::class,'addCostumer']);
+    Route::get('/editPanelCustomer',[admin::class,'editPanelCustomer']);
+    Route::get('/editCustomer/{id}',[admin::class,'showEditCustomer']);
+    Route::post('/editCustomer/{id}',[admin::class,'editCustomer']);
+    Route::delete('/deleteCustomer/{id}',[admin::class,'deleteCustomer']);
 });
