@@ -18,12 +18,11 @@
             </div>
             <div class="col-4" style="display: flex;justify-content: center">
                 <div class="col-10 dashboardBox">
+                    <a  href="/admin/editPanelCustomer">
                     <div class="col-12" style="display: flex;justify-content: center">
                         <img src="image/editePerson.png" width="30" height="30">
                     </div>
-                    <div class="col-12" >
-                        <h>ویرایش مشتری</h>
-                    </div>
+                        ویرایش مشتری</a>
                 </div>
             </div>
             <div class="col-4" style="display: flex;justify-content: center;">
