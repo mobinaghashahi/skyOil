@@ -10,10 +10,11 @@
             </div>
             <div class="col-4" style="display: flex;justify-content: center">
                 <div class="col-10 dashboardBox">
+                    <a  href="/admin/reportCustomers">
                     <div class="col-12" style="display: flex;justify-content: center">
                         <img src="image/reportPerson.png" width="30" height="30">
                     </div>
-                    <h>گزارش گیری مشتریان</h>
+                        گزارش گیری مشتریان</a>
                 </div>
             </div>
             <div class="col-4" style="display: flex;justify-content: center">

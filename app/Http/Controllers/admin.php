@@ -1,10 +1,18 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Http\Request;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Imports\UsersImport;
+use App\Exports\UsersExport;
+
+
 
 use App\Models\Customer;
 use App\Models\User;
-use Illuminate\Http\Request;
+
+
+
 
 class admin extends Controller
 {
@@ -67,5 +75,8 @@ class admin extends Controller
         ]);
 
         return redirect('admin/editCustomer/'.$id)->with('msg','کاربر با موفقیت ویرایش شد');
+    }
+    public function reportCustomers(Request $request){
+        return Excel::download(new UsersExport, 'users-collection.xlsx');
     }
 }
