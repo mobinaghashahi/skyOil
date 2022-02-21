@@ -15,7 +15,7 @@ use App\Http\Controllers\admin;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/',[loginController::class,'test']);
+Route::get('/',[loginController::class,'showIndex']);
 
 Route::get('/logout',[loginController::class,'logout']);
 Route::get('/login',[loginController::class, 'viewLoginForm'])->middleware(['guest']);;

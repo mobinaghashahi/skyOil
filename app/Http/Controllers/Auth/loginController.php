@@ -27,7 +27,7 @@ class loginController extends Controller
     function viewLoginForm(){
         return view('login');
     }
-    function test(){
+    function showIndex(){
         return view('index');
     }
     public function logout(Request $request)
