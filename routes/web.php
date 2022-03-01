@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\loginController;
 use App\Http\Controllers\Dashboard;
 use App\Http\Controllers\admin;
+use App\Http\Controllers\sendSMS;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,6 +16,9 @@ use App\Http\Controllers\admin;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::get('/checkSendSMS',[sendSMS::class,'dailyCheck']);
+
 Route::get('/',[loginController::class,'showIndex']);
 
 Route::get('/logout',[loginController::class,'logout']);
