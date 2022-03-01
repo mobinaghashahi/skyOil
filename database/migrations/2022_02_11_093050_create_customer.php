@@ -23,6 +23,7 @@ class CreateCustomer extends Migration
             $table->string('carType');
             $table->string('dateChangeOil')->nullable();
             $table->string('expirationDay')->nullable();
+            $table->boolean('smsSent')->default(false);
             $table->timestamps();
         });
     }
