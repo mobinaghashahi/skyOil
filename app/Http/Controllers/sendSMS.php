@@ -12,14 +12,12 @@ class sendSMS extends Controller
         foreach ($customers as $customer) {
             echo "<br>";
             $diffCount = diffDaysOfNow(dataConvert($customer->dateChangeOil));
-            echo $diffCount . " ";
-            if ($diffCount == $customer->expirationDay - 5 || $diffCount == $customer->expirationDay - 3 || $diffCount == $customer->expirationDay - 1) {
+            echo 'dif=' . $diffCount . '/customer ex=' . $customer->expirationDay . ' ';
+            if (($diffCount - 5 == $customer->expirationDay || $diffCount - 3 == $customer->expirationDay || $diffCount - 1 == $customer->expirationDay) && $customer->smsSent != 1) {
                 $message = "جناب آقای " . $customer->name . ' ' . $customer->family . ' لطفا نسبت به تعویض روغن خود اقدام نمایید. مجتمع تعویض روغنی آسمان';
                 echo $message;
-                sendSMS($customer->phoneNumber,$message);
-                echo 'message sent';
-                echo $customer->name;
-                echo $customer->phoneNumber;
+                sendSMS($customer->phoneNumber, $message);
+                updateSmsSent($customer->id);
             }
         }
 
