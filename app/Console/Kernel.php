@@ -15,7 +15,11 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        // $schedule->command('inspire')->hourly();
+        $schedule->call(function () {
+
+            sendSMS('09139638917',"این یک پیغام لوکال تست است.");
+
+        })->everyMinute();
     }
 
     /**
