@@ -13,6 +13,9 @@ class dateExplode extends TestCase
      */
     public function test_example()
     {
-        $this->assertTrue(true);
+        /*for ($i=0;$i<=99;$i++) {
+            $this->assertEquals("1400".$i.$i,dateExplode("1400/".$i."/".$i));
+        }*/
+        $this->assertTrue(1);
     }
 }
