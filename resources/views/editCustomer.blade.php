@@ -50,12 +50,7 @@
                                style="text-align: center" value="{{$customer->carType}}">
                     </div>
                     <div class="col-6 addCostumerFild">
-                        <input name="dateChangeOil" style="text-align: center" type="text"  id="exampleInput3" placeholder="تاریخ" data-placement="right"
-                               data-englishnumber="true" value="{{$customer->dateChangeOil}}" />
-                        <div data-mddatetimepicker="true" data-trigger="click"
-                             data-targetselector="#exampleInput3" style="margin: 0px 0px 0px 5px">
-                            <img src="/image/calender.png" width="20" height="20">
-                        </div>
+                        <input name="dateChangeOil" style="text-align: center" type="text"  id="exampleInput3" placeholder="تاریخ" data-placement="right" value="{{$customer->dateChangeOil}}" />
                     </div>
                     <div class="col-6 addCostumerFild">
                         <input class="input" name="expirationDay" placeholder="تاریخ انقضا روغن (به روز)" type="text"

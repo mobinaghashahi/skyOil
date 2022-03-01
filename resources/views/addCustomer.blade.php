@@ -50,12 +50,8 @@
                                style="text-align: center">
                     </div>
                     <div class="col-6 addCostumerFild">
-                        <input name="dateChangeOil" style="text-align: center" type="text"  id="exampleInput3" placeholder="تاریخ" data-placement="right"
+                        <input name="dateChangeOil" style="text-align: center" type="text"  id="exampleInput3" placeholder=" تاریخ تعویض روغن" data-placement="right"
                                data-englishnumber="true" />
-                        <div data-mddatetimepicker="true" data-trigger="click"
-                             data-targetselector="#exampleInput3" style="margin: 0px 0px 0px 5px">
-                            <img src="/image/calender.png" width="20" height="20">
-                        </div>
                     </div>
                     <div class="col-6 addCostumerFild">
                         <input class="input" name="expirationDay" placeholder="تاریخ انقضا روغن (به روز)" type="text"
