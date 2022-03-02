@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\Customer;
+
 function dateExplode($date){
     $explodeDate = explode('/', $date);
     return $explodeDate;
@@ -46,4 +48,10 @@ function sendSMS($number,$message){
 
 
     echo $res_data;
+}
+
+function updateSmsSent($id){
+    $customer=Customer::find($id);
+    $customer->smsSent=1;
+    $customer->update();
 }
