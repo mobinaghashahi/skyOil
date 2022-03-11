@@ -8,16 +8,16 @@
                     <h>پنل کاربری محمد مبین آقاشاهی</h>
                 </div>
             </div>
-            <div class="col-4" style="display: flex;justify-content: center">
+            <div class="col-6" style="display: flex;justify-content: center; float: right">
                 <div class="col-10 dashboardBox">
-                    <a  href="/admin/reportCustomers">
-                    <div class="col-12" style="display: flex;justify-content: center">
-                        <img src="image/reportPerson.png" width="30" height="30">
-                    </div>
-                        گزارش گیری مشتریان</a>
+                    <a class="" href="/admin/addCustomer">
+                        <div class="col-12" style="display: flex;justify-content: center">
+                            <img src="image/addPerson.png" width="30" height="30">
+                        </div>
+                        افزودن مشتری جدید</a>
                 </div>
             </div>
-            <div class="col-4" style="display: flex;justify-content: center">
+            <div class="col-6" style="display: flex;justify-content: center">
                 <div class="col-10 dashboardBox">
                     <a  href="/admin/editPanelCustomer">
                     <div class="col-12" style="display: flex;justify-content: center">
@@ -26,13 +26,22 @@
                         ویرایش مشتری</a>
                 </div>
             </div>
-            <div class="col-4" style="display: flex;justify-content: center;">
+            <div class="col-6" style="display: flex;justify-content: center">
                 <div class="col-10 dashboardBox">
-                    <a class="" href="/admin/addCustomer">
-                    <div class="col-12" style="display: flex;justify-content: center">
-                        <img src="image/addPerson.png" width="30" height="30">
-                    </div>
-                    افزودن مشتری جدید</a>
+                    <a  href="/admin/reportCustomers">
+                        <div class="col-12" style="display: flex;justify-content: center">
+                            <img src="image/reportPerson.png" width="30" height="30">
+                        </div>
+                        گزارش گیری مشتریان</a>
+                </div>
+            </div>
+            <div class="col-6" style="display: flex;justify-content: center;">
+                <div class="col-10 dashboardBox">
+                    <a class="" href="/admin/oilChange">
+                        <div class="col-12" style="display: flex;justify-content: center">
+                            <img src="image/oilChange.png" width="35" height="30">
+                        </div>
+                        تمدید روغن مشتری</a>
                 </div>
             </div>
         </div>
