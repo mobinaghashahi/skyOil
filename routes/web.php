@@ -35,4 +35,6 @@ Route::prefix('/admin')->middleware('auth')->group(function () {
     Route::post('/editCustomer/{id}',[admin::class,'editCustomer']);
     Route::delete('/deleteCustomer/{id}',[admin::class,'deleteCustomer']);
     Route::get('/reportCustomers',[admin::class,'reportCustomers']);
+    Route::get('/oilChange',[admin::class,'oilChangeView']);
+    Route::post('/oilChangeUpdate',[admin::class,'oilChangeUpdate']);
 });
