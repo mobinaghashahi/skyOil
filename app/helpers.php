@@ -28,8 +28,8 @@ function sendSMS($number,$message){
     $rcpt_nm = array($number);
     $param = array
     (
-        'uname'=>'09139638917',
-        'pass'=>'faraz1180076915',
+        'uname'=>'username',
+        'pass'=>'password',
         'from'=>'+983000505',
         'message'=>$message,
         'to'=>json_encode($rcpt_nm),
