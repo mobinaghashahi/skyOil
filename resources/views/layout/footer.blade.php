@@ -11,11 +11,11 @@
     </div>
     <div class="col-3" style="float: left;">
         <img src="/image/logo/phone.png" width="50" height="50">
-        <p style="color: white">09127192840</p>
+        <p style="color: white">09939146646</p>
     </div>
     <di class="col-3" style="float: left;">
         <img src="/image/logo/whatsapp.png" width="50" height="50">
-        <p style="color: white">09127192840</p>
+        <p style="color: white">09939146646</p>
     </di>
 </div>
 

@@ -4,8 +4,8 @@
     <div class="col-12" style="justify-content: center;display: flex">
         <div class="col-10" style="background-image: linear-gradient(#717c89,#2d3748);margin: 70px 20px 70px 20px;border-radius: 20px">
             <div style="display: flex;justify-content: center">
-                <div class="col-4" style="text-align: center;margin-top: 20px;color: #e3da27">
-                    <h>پنل کاربری محمد مبین آقاشاهی</h>
+                <div class="col-4" style="text-align: center;margin: 20px 0px 20px 0px;color: #e3da27">
+                    <h>پنل کاربری</h>
                 </div>
             </div>
             <div class="col-6" style="display: flex;justify-content: center; float: right">
@@ -37,11 +37,29 @@
             </div>
             <div class="col-6" style="display: flex;justify-content: center;">
                 <div class="col-10 dashboardBox">
+                    <a class="" href="/admin/customerSearch">
+                        <div class="col-12" style="display: flex;justify-content: center">
+                            <img src="image/reportDetailsPerson.png" width="30" height="30">
+                        </div>
+                        گزارش گیری مشتری</a>
+                </div>
+            </div>
+            <div class="col-6" style="display: flex;justify-content: center;">
+                <div class="col-10 dashboardBox">
                     <a class="" href="/admin/oilChange">
                         <div class="col-12" style="display: flex;justify-content: center">
                             <img src="image/oilChange.png" width="35" height="30">
                         </div>
                         تمدید روغن مشتری</a>
+                </div>
+            </div>
+            <div class="col-6" style="display: flex;justify-content: center;">
+                <div class="col-10 dashboardBox">
+                    <a class="" href="/admin/reward">
+                        <div class="col-12" style="display: flex;justify-content: center">
+                            <img src="image/reward.png" width="80" height="30">
+                        </div>
+                        هدیه</a>
                 </div>
             </div>
         </div>

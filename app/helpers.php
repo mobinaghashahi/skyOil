@@ -1,6 +1,8 @@
 <?php
 
 use App\Models\Customer;
+use App\Models\oilBuy;
+use App\Models\reward;
 
 function dateExplode($date){
     $explodeDate = explode('/', $date);
@@ -54,4 +56,28 @@ function updateSmsSent($id){
     $customer=Customer::find($id);
     $customer->smsSent=1;
     $customer->update();
+}
+
+function scoreChecker(){
+
+}
+function sumScore($customerId){
+    $historyChangeOil=oilBuy::where('custumer_id',$customerId)->get();
+
+    $allScore=0;
+    foreach ($historyChangeOil as $oilChange)
+    {
+        $allScore+= $oilChange->liter;
+    }
+    return $allScore;
+}
+
+function sumScorePay($customerId){
+    $historyScorePay=reward::where('custumer_id',$customerId)->get();
+    $allScorePay=0;
+    foreach ($historyScorePay as $scorePay)
+    {
+        $allScorePay+= $scorePay->scorePay;
+    }
+    return $allScorePay;
 }

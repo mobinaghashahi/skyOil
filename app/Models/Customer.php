@@ -9,6 +9,7 @@ class Customer extends Model
 {
     use HasFactory;
     protected $primaryKey='id';
-    protected $fillable=['name','family','phoneNumber','meliCode','carTag','dateChangeOil','expirationDay','smsSent'];
+    protected $fillable=['name','family','phoneNumber','meliCode','carTag','dateChangeOil','expirationDay','smsSent','kilometerCurrent','kilometerPrevious','kilometerProposed'];
     protected $table='customer';
+
 }

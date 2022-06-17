@@ -50,13 +50,32 @@
                                style="text-align: center" value="{{$customer->carType}}">
                     </div>
                     <div class="col-6 addCostumerFild">
+                        <input class="input" name="oilName" placeholder="نام روغن" type="text"
+                               style="text-align: center" value="{{$customerBuy[count($customerBuy)-1]->oilName}}">
+                    </div>
+                    <div class="col-6 addCostumerFild">
+                        <input class="input" name="liter" placeholder="لیتر" type="text"
+                               style="text-align: center" value="{{$customerBuy[count($customerBuy)-1]->liter}}">
+                    </div>
+                    <div class="col-6 addCostumerFild">
                         <input name="dateChangeOil" style="text-align: center" type="text"  id="exampleInput3" placeholder="تاریخ" data-placement="right" value="{{$customer->dateChangeOil}}" />
                     </div>
                     <div class="col-6 addCostumerFild">
                         <input class="input" name="expirationDay" placeholder="تاریخ انقضا روغن (به روز)" type="text"
                                style="text-align: center" value="{{$customer->expirationDay}}">
                     </div>
-
+                    <div class="col-6 addCostumerFild">
+                        <input class="input" name="serviceMan" placeholder="نام سرویس کار" type="text"
+                               style="text-align: center" value="{{$customerBuy[count($customerBuy)-1]->serviceMan}}">
+                    </div>
+                    <div class="col-6 addCostumerFild">
+                        <input class="input" name="kilometerCurrent" placeholder="شماره کیلومتر" type="text"
+                               style="text-align: center" value="{{$customer->kilometerCurrent}}">
+                    </div>
+                    <div class="col-6 addCostumerFild">
+                        <input class="input" name="kilometerProposed" placeholder="کارکرد پیشنهادی" type="text"
+                               style="text-align: center" value="{{$customer->kilometerProposed}}">
+                    </div>
                     <div class="col-12" style="display: flex;justify-content: center;margin: 20px 0px 20px 0px">
                         <input style="width: 150px;height: 40px;border-radius: 5px" name="enter" type="submit"
                                value="ویرایش">

@@ -37,4 +37,8 @@ Route::prefix('/admin')->middleware('auth')->group(function () {
     Route::get('/reportCustomers',[admin::class,'reportCustomers']);
     Route::get('/oilChange',[admin::class,'oilChangeView']);
     Route::post('/oilChangeUpdate',[admin::class,'oilChangeUpdate']);
+    Route::get('/reward',[admin::class,'rewardView']);
+    Route::post('/reward',[admin::class,'addReward']);
+    Route::post('/reportCustomer',[admin::class,'reportCustomer']);
+    Route::get('/customerSearch',[admin::class,'customerSearch']);
 });

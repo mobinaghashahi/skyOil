@@ -19,6 +19,9 @@ class CreateCustomer extends Migration
             $table->string('family');
             $table->string('meliCode',10);
             $table->string('carTag');
+            $table->integer('kilometerCurrent')->default(0);
+            $table->integer('kilometerPrevious')->default(0);
+            $table->integer('kilometerProposed')->default(0);
             $table->string('phoneNumber',11);
             $table->string('carType');
             $table->string('dateChangeOil')->nullable();
