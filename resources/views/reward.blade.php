@@ -6,7 +6,7 @@
             <div class="col-12" style="text-align: center;color: white;margin: 10px 0px 20px 0px">
                 <h>هدیه</h>
             </div>
-            <form name="oilChange" action="/admin/reward/" method="post">
+            <form name="oilChange" action="/admin/reward" method="post">
                 @csrf
                 @if (\Session::has('msg'))
                     <div class="alert alert-success col-12" style="text-align: center">

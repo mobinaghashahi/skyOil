@@ -6,7 +6,7 @@
             <div class="col-12" style="text-align: center;color: white;margin: 10px 0px 20px 0px">
                 <h>فاکتور فروش مشتری</h>
             </div>
-            <form name="reportCustomer" action="/admin/reportCustomer/" method="post">
+            <form name="reportCustomer" action="/admin/reportCustomer/1" method="post">
                 @csrf
                 @if (\Session::has('msg'))
                     <div class="alert alert-success col-12" style="text-align: center">

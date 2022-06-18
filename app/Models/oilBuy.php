@@ -9,7 +9,7 @@ class oilBuy extends Model
 {
     use HasFactory;
     protected $primaryKey='id';
-    protected $fillable=['oilName','dateChangeOil','serviceMan','customer_id'];
-    protected $table='oilBuy';
+    protected $fillable=['oilName','dateChangeOil','serviceMan','liter','customer_id'];
+    protected $table='oilbuy';
 
 }

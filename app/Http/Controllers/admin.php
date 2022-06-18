@@ -87,6 +87,7 @@ class admin extends Controller
             'family'=>$request->family,
             'meliCode'=>$request->meliCode,
             'carTag'=>$request->carTag,
+            'carType'=>$request->carType,
             'phoneNumber' => $request->phoneNumber,
             'dateChangeOil' => $request->dateChangeOil,
             'expirationDay' => $request->expirationDay,
@@ -127,6 +128,7 @@ class admin extends Controller
 
     public function oilChangeUpdate(Request $request)
     {
+
         $valid = $request->validate([
             'meliCode'=>'required|max:10|min:10',
             'dateChangeOil'=>'required',
@@ -164,8 +166,6 @@ class admin extends Controller
     }
     public function addReward(Request $request)
     {
-
-
         $valid = $request->validate([
             'meliCode'=>'required|max:10|min:10',
             'rewardTitle'=>'required',
@@ -192,7 +192,7 @@ class admin extends Controller
             return redirect('admin/reward/' )->with('msg', 'هدیه با موفقیت ثبت شد');
         }
         $errorMsg=' امتیاز کاربر به اندازه کافی نیست. امتیاز باقی مانده کاربر'.$remainingScore.' است.';
-        return redirect('admin/reward/' )->with('error', $errorMsg);
+        return redirect('admin/reward/')->with('error', $errorMsg);
     }
 
 }
