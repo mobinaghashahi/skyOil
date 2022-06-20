@@ -88,7 +88,7 @@ date_default_timezone_set('Iran');
             </tr>
             <tr>
                 <th>
-                    مانده امتیازات
+                    مانده فعلی
                 </th>
                 <th>
                     {{$customerBuy->sum('liter')-$customerRewards->sum('scorePay')}}
