@@ -11,15 +11,14 @@ date_default_timezone_set('Iran');
 </head>
 <body>
 <div class="printFactor">
-    <div style="text-align: right;padding-top: 0.5cm;direction: rtl" class="col-4">
+    <div style="text-align: right;padding-top: 0.5cm;direction: rtl;" class="col-4">
         <a style="direction: rtl"> تاریخ: {{$customerBuy[count($customerBuy)-1]->dateChangeOil }}</a>
         <p>شماره: {{$customerBuy[count($customerBuy)-1]->id}}</p>
         <p>ساعت: {{date("H:i:s")}}</p>
     </div>
-    <div class="col-4" style="text-align: center;padding-top: 0.5cm">
-        <a style="text-align: center">فاکتور فروش</a>
+    <div class="col-2" style="padding-top: 0.5cm;">
     </div>
-    <div class="col-4" style="padding-top: 0.5cm">
+    <div class="col-6" style="padding-top: 0.5cm;">
         <a>مجتمع فنی و تخصصی سرویس روغن آسمان</a>
     </div>
 
