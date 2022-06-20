@@ -15,8 +15,9 @@ class admin extends Controller
     function showAddCostumerForm()
     {
         Verta::setStringformat('Y/n/j');
-
-        return view('addCustomer',['toDay'=>verta()]);
+        $v=verta();
+        $v->timezone('Asia/Tehran');
+        return view('addCustomer',['toDay'=>$v]);
     }
 
     function addCostumer(Request $request)
@@ -132,7 +133,9 @@ class admin extends Controller
     public function oilChangeView()
     {
         Verta::setStringformat('Y/n/j');
-        return view('oilChange',['toDay'=>verta()]);
+        $v=verta();
+        $v->timezone('Asia/Tehran');
+        return view('oilChange',['toDay'=>$v]);
     }
 
     public function oilChangeUpdate(Request $request)
@@ -172,7 +175,9 @@ class admin extends Controller
     public function rewardView()
     {
         Verta::setStringformat('Y/n/j');
-        return view('reward',['toDay'=>verta()]);
+        $v=verta();
+        $v->timezone('Asia/Tehran');
+        return view('reward',['toDay'=>$v]);
     }
     public function addReward(Request $request)
     {
