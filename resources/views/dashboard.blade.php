@@ -19,7 +19,7 @@
             </div>
             <div class="col-6" style="display: flex;justify-content: center">
                 <div class="col-10 dashboardBox">
-                    <a  href="/admin/editPanelCustomer">
+                    <a  href="/admin/customerEditSearch">
                     <div class="col-12" style="display: flex;justify-content: center">
                         <img src="image/editePerson.png" width="30" height="30">
                     </div>

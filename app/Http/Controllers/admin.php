@@ -58,9 +58,14 @@ class admin extends Controller
 
         return redirect('admin/addCustomer')->with('msg','کاربر با موفقیت افزوده شد');
     }
-    function editPanelCustomer(){
-        return view('editPanelCustomer',['users'=>Customer::all()]);
+    function editPanelCustomer(Request $request){
+        return view('editPanelCustomer',['customer'=>Customer::where('meliCode','LIKE','%'.$request->meliCode.'%')->get()]);
     }
+
+    function customerEditSearch(){
+        return view('customerEditSearch');
+    }
+
     function deleteCustomer($id){
         $customer=Customer::findOrFail($id);
         $customer->delete();

@@ -17,7 +17,7 @@
                     <th class="firstRow">نام</th>
                     <th class="firstRow">ردیف</th>
                 </tr>
-            @foreach ($users as $index => $user)
+            @foreach ($customer as $index => $user)
                     <tr>
                         <th><div class="col-12" style="display:flex;justify-content: center">
                                 <div class="col-3">
