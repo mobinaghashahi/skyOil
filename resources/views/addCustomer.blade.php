@@ -1,7 +1,6 @@
 @extends('layout.master')
 
 @section('content')
-
     <div class="col-12" style="display: flex;justify-content: center;margin: 50px 0px 50px 0px;">
         <div class="col-9" style="background-image: linear-gradient(#717c89,#2d3748);border-radius: 50px;padding: 20px">
             <div class="col-12 addCostumerFilds">
@@ -59,7 +58,7 @@
                     </div>
                     <div class="col-6 addCostumerFild">
                         <input name="dateChangeOil" style="text-align: center" type="text"  id="exampleInput3" placeholder=" تاریخ تعویض روغن" data-placement="right"
-                               data-englishnumber="true" />
+                               data-englishnumber="true" value="{{$toDay}}" />
                     </div>
                     <div class="col-6 addCostumerFild">
                         <input class="input" name="expirationDay" placeholder="تاریخ انقضا روغن (به روز)" type="text"

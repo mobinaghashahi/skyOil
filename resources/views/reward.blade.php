@@ -39,7 +39,7 @@
                 </div>
                 <div class="col-12" style="display: flex;justify-content: center">
                     <input class="input" name="dateRewardPay" placeholder="تاریخ دریافت هدیه" type="text"
-                           style="text-align: center;margin: 20px 0px 20px 0px">
+                           style="text-align: center;margin: 20px 0px 20px 0px" value="{{$toDay}}">
                 </div>
                 <div class="col-12" style="display: flex;justify-content: center;margin: 20px 0px 20px 0px">
                     <input style="width: 150px;height: 40px;border-radius: 5px" name="enter" type="submit"

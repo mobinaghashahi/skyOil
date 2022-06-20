@@ -35,12 +35,11 @@
                     <input class="input" name="liter" placeholder="لیتر" type="text" style="text-align: center">
                 </div>
                 <div class="col-12" style="display: flex;justify-content: center;margin: 10px 0px 10px 0px">
-                    <input class="input" name="dateChangeOil" placeholder="تاریخ تعویض روغن" type="text" style="text-align: center" >
+                    <input class="input" name="dateChangeOil" placeholder="تاریخ تعویض روغن" type="text" style="text-align: center" value="{{$toDay}}" >
                 </div>
                 <div class="col-12" style="display: flex;justify-content: center;margin: 10px 0px 10px 0px">
                     <input class="input" name="expirationDay" placeholder="تاریخ انقضا روغن (به روز)" type="text" style="text-align: center" >
                 </div>
-
                 <div class="col-12" style="display: flex;justify-content: center;margin: 10px 0px 10px 0px">
                     <input class="input" name="serviceMan" placeholder="نام سرویس کار" type="text"
                            style="text-align: center">

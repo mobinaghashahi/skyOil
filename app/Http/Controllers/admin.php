@@ -5,6 +5,7 @@ use App\Exports\UsersExport;
 use App\Models\Customer;
 use App\Models\oilBuy;
 use App\Models\reward;
+use Hekmatinasser\Verta\Verta;
 use Illuminate\Http\Request;
 use Maatwebsite\Excel\Facades\Excel;
 
@@ -13,7 +14,9 @@ class admin extends Controller
 {
     function showAddCostumerForm()
     {
-        return view('addCustomer');
+        Verta::setStringformat('Y/n/j');
+
+        return view('addCustomer',['toDay'=>verta()]);
     }
 
     function addCostumer(Request $request)
@@ -123,7 +126,8 @@ class admin extends Controller
 
     public function oilChangeView()
     {
-        return view('oilChange');
+        Verta::setStringformat('Y/n/j');
+        return view('oilChange',['toDay'=>verta()]);
     }
 
     public function oilChangeUpdate(Request $request)
@@ -162,7 +166,8 @@ class admin extends Controller
     }
     public function rewardView()
     {
-        return view('reward');
+        Verta::setStringformat('Y/n/j');
+        return view('reward',['toDay'=>verta()]);
     }
     public function addReward(Request $request)
     {
