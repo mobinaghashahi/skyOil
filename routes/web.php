@@ -22,7 +22,7 @@ Route::get('/checkSendSMS',[sendSMS::class,'dailyCheck']);
 Route::get('/',[loginController::class,'showIndex']);
 
 Route::get('/logout',[loginController::class,'logout']);
-Route::get('/login',[loginController::class, 'viewLoginForm'])->middleware(['guest']);;
+Route::get('/login',[loginController::class, 'viewLoginForm'])->middleware(['guest'])->name('login');;
 Route::post('/login',[loginController::class, 'login']);
 
 Route::get('/dashboard',[Dashboard::class,'viewDashboard'])->middleware('auth');
