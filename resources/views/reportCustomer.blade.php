@@ -8,8 +8,16 @@ date_default_timezone_set('Iran');
     <link href="/css/style.css" rel="stylesheet">
     <title></title>
     <link href="style.css" rel="stylesheet"/>
+    <style type="text/css" media="print">
+        @page {
+            size: auto;   /* auto is the initial value */
+            margin: 0;  /* this affects the margin in the printer settings */
+        }
+    </style>
 </head>
 <body>
+
+
 <div class="printFactor">
     <div style="text-align: right;padding-top: 0.5cm;direction: rtl;" class="col-4">
         <a style="direction: rtl"> تاریخ: {{$customerBuy[count($customerBuy)-1]->dateChangeOil }}</a>
