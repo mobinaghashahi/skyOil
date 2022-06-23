@@ -118,7 +118,7 @@ class admin extends Controller
 
     public function reportCustomers(Request $request)
     {
-        return Excel::download(new UsersExport, 'users-collection.xlsx');
+        return Excel::download(new UsersExport, 'گزارش کلی.xlsx');
     }
     public function reportCustomer(Request $request){
         $customer = Customer::where('meliCode', $request->meliCode)->first();
