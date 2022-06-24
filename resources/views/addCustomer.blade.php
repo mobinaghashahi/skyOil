@@ -26,55 +26,44 @@
                         @endif
                     </div>
                     <div class="col-6 addCostumerFild">
-                        <input class="input" name="name" placeholder="نام" type="text" style="text-align: center">
+                        <input class="input" name="name" placeholder="نام" type="text">
                     </div>
                     <div class="col-6 addCostumerFild">
-                        <input class="input" name="family" placeholder="نام خانوادگی" type="text"
-                               style="text-align: center">
+                        <input class="input" name="family" placeholder="نام خانوادگی" type="text">
                     </div>
                     <div class="col-6 addCostumerFild">
-                        <input class="input" name="meliCode" placeholder="کد ملی" type="text"
-                               style="text-align: center">
+                        <input class="input" name="meliCode" placeholder="کد ملی" type="text">
                     </div>
                     <div class="col-6 addCostumerFild">
-                        <input class="input" name="carTag" placeholder="شماره پلاک" type="text"
-                               style="text-align: center">
+                        <input class="input" name="carTag" placeholder="شماره پلاک" type="text">
                     </div>
                     <div class="col-6 addCostumerFild">
-                        <input class="input" name="phoneNumber" placeholder="شماره موبایل" type="text"
-                               style="text-align: center">
+                        <input class="input" name="phoneNumber" placeholder="شماره موبایل" type="text">
                     </div>
                     <div class="col-6 addCostumerFild">
-                        <input class="input" name="carType" placeholder="نوع ماشین" type="text"
-                               style="text-align: center">
+                        <input class="input" name="carType" placeholder="نوع ماشین" type="text">
                     </div>
                     <div class="col-6 addCostumerFild">
-                        <input class="input" name="oilName" placeholder="نام روغن" type="text"
-                               style="text-align: center">
+                        <input class="input" name="oilName" placeholder="نام روغن" type="text">
                     </div>
                     <div class="col-6 addCostumerFild">
-                        <input class="input" name="liter" placeholder="لیتر" type="text"
-                               style="text-align: center">
+                        <input class="input" name="liter" placeholder="لیتر" type="text">
                     </div>
                     <div class="col-6 addCostumerFild">
                         <input name="dateChangeOil" style="text-align: center" type="text"  id="exampleInput3" placeholder=" تاریخ تعویض روغن" data-placement="right"
                                data-englishnumber="true" value="{{$toDay}}" />
                     </div>
                     <div class="col-6 addCostumerFild">
-                        <input class="input" name="expirationDay" placeholder="تاریخ انقضا روغن (به روز)" type="text"
-                               style="text-align: center">
+                        <input class="input" name="expirationDay" placeholder="تاریخ انقضا روغن (به روز)" type="text">
                     </div>
                     <div class="col-6 addCostumerFild">
-                        <input class="input" name="serviceMan" placeholder="نام سرویس کار" type="text"
-                               style="text-align: center">
+                        <input class="input" name="serviceMan" placeholder="نام سرویس کار" type="text">
                     </div>
                     <div class="col-6 addCostumerFild">
-                        <input class="input" name="kilometerCurrent" placeholder="شماره کیلومتر" type="text"
-                               style="text-align: center">
+                        <input class="input" name="kilometerCurrent" placeholder="شماره کیلومتر" type="text">
                     </div>
                     <div class="col-6 addCostumerFild">
-                        <input class="input" name="kilometerProposed" placeholder="کارکرد پیشنهادی" type="text"
-                               style="text-align: center">
+                        <input class="input" name="kilometerProposed" placeholder="کارکرد پیشنهادی" type="text">
                     </div>
                     <div class="col-12" style="display: flex;justify-content: center;margin: 20px 0px 20px 0px">
                         <input style="width: 150px;height: 40px;border-radius: 5px" name="enter" type="submit"
