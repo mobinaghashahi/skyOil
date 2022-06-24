@@ -67,10 +67,13 @@ class admin extends Controller
         return view('customerEditSearch');
     }
 
-    function deleteCustomer($id){
+    function deleteCustomer(Request $r,$id){
+
         $customer=Customer::findOrFail($id);
+
         $customer->delete();
-        return back();
+        $msg=$customer->name.' '.$customer->family.' با موفقیت حذف شد.';
+        return redirect('admin/customerEditSearch' )->with('msg', $msg);
     }
     function showEditCustomer($id){
         return view('editCustomer',['customer'=>Customer::findOrFail($id),'customerBuy'=>Customer::join('oilbuy','oilbuy.custumer_id','=','customer.id')->where('custumer_id',$id)->get()]);
@@ -150,9 +153,12 @@ class admin extends Controller
             'kilometerCurrent'=>'required|int|min:0',
             'kilometerProposed'=>'required|int|min:0',
         ]);
+
+
         $customer = Customer::where('meliCode', $request->meliCode)->first();
         if ($customer == null)
             return redirect('admin/oilChange/')->with('error', 'کد ملی وارد شده وجود ندارد');
+
         $customer->update([
             'smsSent' => 0,
             'dateChangeOil' => $request->dateChangeOil,
