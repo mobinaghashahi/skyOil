@@ -17,6 +17,11 @@
                                 </ul>
                             </div>
                         @endif
+                            @if (\Session::has('error'))
+                                <div class="alert alert-danger col-12" style="text-align: center">
+                                    {!! \Session::get('error') !!}
+                                </div>
+                            @endif
                         @if ($errors->any())
                             @foreach($errors->all() as $error)
                                 <div class="col-12">
