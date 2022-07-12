@@ -12,7 +12,7 @@ class sendSMS extends Controller
         foreach ($customers as $customer) {
             echo "<br>";
             $diffCount = diffDaysOfNow(dataConvert($customer->dateChangeOil));
-            echo 'dif=' . $diffCount . '/customer ex=' . $customer->expirationDay . ' ';
+            echo 'rozhaye gozashte=' . $diffCount . ' |customer ex=' . $customer->expirationDay . ' |smsSent'.$customer->smsSent;
             if ($customer->expirationDay - 5 <= $diffCount && $customer->smsSent != 1) {
                 $message = "جناب آقای " . $customer->name . ' ' . $customer->family . ' لطفا نسبت به تعویض روغن خود اقدام نمایید. مجتمع تعویض روغنی آسمان';
                 echo $message;
