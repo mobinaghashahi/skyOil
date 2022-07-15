@@ -19,9 +19,7 @@ class loginController extends Controller
             $request->session()->regenerate(); //سشن را بازسازی می کنیم
             return redirect()->intended('/'); //کاربر احراز هویت شده را با داشبورد منتقل می کنیم
         }
-        return back()->withErrors([ //کاربر پیدا نشد و هنگام بازگشت به صفحه ورود خطا را نشان میدهیم
-            'email' => 'کاربری با این مشخصات وجود ندارد',
-        ]);
+        return back()->with('error', 'کاربری با این مشخصات وجود ندارد.');
     }
 
     function viewLoginForm(){
