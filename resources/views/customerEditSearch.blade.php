@@ -8,23 +8,9 @@
             </div>
             <form name="reportCustomer" action="/admin/editPanelCustomer" method="post">
                 @csrf
-                @if (\Session::has('msg'))
-                    <div class="alert alert-success col-12" style="text-align: center">
-                        {!! \Session::get('msg') !!}
-                    </div>
-                @endif
-                @if (\Session::has('error'))
-                    <div class="alert alert-danger col-12" style="text-align: center">
-                        {!! \Session::get('error') !!}
-                    </div>
-                @endif
-                @if ($errors->any())
-                    @foreach($errors->all() as $error)
-                        <div class="col-12">
-                            <p style="color: #950202;text-align: center;line-height: 15px">{{$error}}</p>
-                        </div>
-                    @endforeach
-                @endif
+                @include('layout.msg')
+                @include('layout.queryMsg')
+                @include('layout.errorValidation')
                 <div class="col-12" style="display: flex;justify-content: center">
                     <input class="input" name="meliCode" placeholder="کد ملی مشتری" type="text" style="text-align: center;margin: 20px 0px 20px 0px">
                 </div>

@@ -9,18 +9,15 @@
                  style="display: flex;justify-content: center;background-image: linear-gradient(#717c89,#2d3748);padding: 30px;border-radius: 50px">
                 <form method="post" name="enter" action="/login">
                     @csrf
-                    <div>
-                        @if ($errors->any())
-                            @foreach($errors->all() as $error)
-                                <p style="color: #950202;text-align: center;background-color: #d2be0a">{{$error}}</p>
-                            @endforeach
-                        @endif
-                    </div>
+                    @include('layout.msg')
+                    @include('layout.queryMsg')
+                    @include('layout.errorValidation')
                     <div class="col-12" style="display: flex;justify-content: center;margin: 30px 0px 10px 0px;">
                         <input class="input" name="email" placeholder="ایمیل" type="email" style="text-align: center">
                     </div>
                     <div class="col-12" style="display: flex;justify-content: center;margin: 0px 0px 20px 0px">
-                        <input type="password" placeholder="رمز عبور" id="password" name="password" style="text-align: center;margin: 10px 0px 10px 0px;">
+                        <input type="password" placeholder="رمز عبور" id="password" name="password"
+                               style="text-align: center;margin: 10px 0px 10px 0px;">
                     </div>
                     <div class="col-12" style="display: flex;justify-content: center;margin: 20px 0px 20px 0px">
                         <input style="width: 45%;height: 40px;border-radius: 5px" name="enter" type="submit"
