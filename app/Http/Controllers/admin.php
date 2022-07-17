@@ -25,9 +25,9 @@ class admin extends Controller
         $valid = $request->validate([
             'name' => 'required',
             'family'=>'required',
-            'meliCode'=>'required|max:10|min:10',
+            'meliCode'=>'max:10|min:0|required_without:phoneNumber',
             'carTag'=>'required',
-            'phoneNumber'=>'required|max:11|min:11',
+            'phoneNumber'=>'required_without:meliCode|max:11|min:11',
             'dateChangeOil'=>'required',
             'expirationDay'=>'required|int|min:0',
             'oilName'=>'required',
@@ -86,9 +86,9 @@ class admin extends Controller
         $valid = $request->validate([
             'name' => 'required',
             'family'=>'required',
-            'meliCode'=>'required|max:10|min:10',
+            'meliCode'=>'max:10|min:0|required_without:phoneNumber',
             'carTag'=>'required',
-            'phoneNumber'=>'required|max:11|min:11',
+            'phoneNumber'=>'required_without:meliCode|max:11|min:11',
             'dateChangeOil'=>'required',
             'expirationDay'=>'required|int|min:0',
             'oilName'=>'required',
