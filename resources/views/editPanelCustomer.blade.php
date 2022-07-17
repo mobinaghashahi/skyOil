@@ -33,7 +33,11 @@
 
                             </div></th>
                         <th>{{$user->phoneNumber}}</th>
+                        @if($user->meliCode==NULL)
+                        <th style="background-color: #761c19">ناموجود</th>
+                        @else
                         <th>{{$user->meliCode}}</th>
+                        @endif
                         <th>{{$user->family}}</th>
                         <th>{{$user->name}}</th>
                         <th>{{$index+1}}</th>
