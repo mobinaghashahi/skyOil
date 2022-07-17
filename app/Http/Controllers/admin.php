@@ -33,7 +33,9 @@ class admin extends Controller
             'liter'=>'required|int|min:0',
         ]);
 
-        $customer = Customer::where('meliCode', $request->meliCode)->first();
+        $customer = Customer::where('meliCode', $request->meliCode)
+            ->orWhere('phoneNumber', $request->phoneNumber)
+            ->first();
         if ($customer)
             return redirect('admin/addCustomer/')->with('error', 'این مشتری قبلا افزوده شده است.');
 
