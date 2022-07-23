@@ -43,7 +43,11 @@ Route::prefix('/admin')->middleware('auth')->group(function () {
     Route::post('/oilChangeUpdate/{id}',[admin::class,'oilChangeUpdate']);
 
     Route::get('/reward',[admin::class,'rewardView']);
-    Route::post('/reward',[admin::class,'addReward']);
+    Route::get('/customerRewardSearch',[admin::class,'customerRewardSearch']);
+    Route::post('/rewardPanelCustomer',[admin::class,'rewardPanelCustomer']);
+    Route::post('/reward/{id}',[admin::class,'reward']);
+    Route::post('/addReward',[admin::class,'addReward']);
+
     Route::post('/reportPanelCustomer',[admin::class,'reportPanelCustomer']);
     Route::post('/reportCustomer/{id}',[admin::class,'reportCustomer']);
     Route::get('/customerReportSearch',[admin::class,'customerReportSearch']);

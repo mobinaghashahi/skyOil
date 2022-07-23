@@ -195,24 +195,46 @@ class admin extends Controller
         $msg='تاریخ تعویض روغن کاربر با موفقیت ویرایش شد.';
         return redirect('admin/customerOilChangeSearch')->with('msg', $msg);
     }
+
+    public function customerRewardSearch()
+    {
+        return view('customerRewardSearch');
+    }
+    public function reward($id)
+    {
+        Verta::setStringformat('Y/n/j');
+        $v=verta();
+
+        $sumScore=sumScore($id);
+        $sumScorePay=sumScorePay($id);
+        $remainingScore=$sumScore-$sumScorePay;
+
+        return view('reward',['toDay'=>$v,'customer'=>Customer::where('id',$id)->get(),'remainingScore'=>$remainingScore]);
+    }
+    public function rewardPanelCustomer(Request $request)
+    {
+        return view('rewardPanelCustomer',['customer'=>Customer::where('meliCode','LIKE','%'.$request->search.'%')
+            ->orWhere('phoneNumber','LIKE','%'.$request->search.'%')
+            ->orWhere('name','LIKE','%'.$request->search.'%')
+            ->orWhere('family','LIKE','%'.$request->search.'%')
+            ->get()]);
+    }
     public function rewardView()
     {
         Verta::setStringformat('Y/n/j');
         $v=verta();
-        $v->timezone('Asia/Tehran');
         return view('reward',['toDay'=>$v]);
     }
     public function addReward(Request $request)
     {
         $valid = $request->validate([
-            'meliCode'=>'required|max:10|min:10',
             'rewardTitle'=>'required',
             'dateRewardPay'=>'required',
             'payScore'=>'int|min:0',
         ]);
 
         //چک کردن وجود مشتری جهت دریافت هدیه
-        $customer = Customer::where('meliCode', $request->meliCode)->first();
+        $customer = Customer::where('id', $request->id)->first();
         if ($customer == null)
             return redirect('admin/reward/')->with('error', 'کد ملی وارد شده وجود ندارد');
 
@@ -227,10 +249,10 @@ class admin extends Controller
             $reward->datePayReward=$request->dateRewardPay;
             $reward->custumer_id=$customer->id;
             $reward->save();
-            return redirect('admin/reward/' )->with('msg', 'هدیه با موفقیت ثبت شد');
+            return redirect('admin/customerRewardSearch/' )->with('msg', 'هدیه با موفقیت ثبت شد');
         }
-        $errorMsg=' امتیاز کاربر به اندازه کافی نیست. امتیاز باقی مانده کاربر'.$remainingScore.' است.';
-        return redirect('admin/reward/')->with('error', $errorMsg);
+        $errorMsg=' امتیاز کاربر به اندازه کافی نیست. امتیاز باقی مانده کاربر '.$remainingScore.'  است.';
+        return redirect('admin/customerRewardSearch')->with('error', $errorMsg);
     }
 
 }

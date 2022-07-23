@@ -55,7 +55,7 @@
             </div>
             <div class="col-6" style="display: flex;justify-content: center;">
                 <div class="col-10 dashboardBox">
-                    <a class="" href="/admin/reward">
+                    <a class="" href="/admin/customerRewardSearch">
                         <div class="col-12" style="display: flex;justify-content: center">
                             <img src="image/reward.png" width="80" height="30">
                         </div>
