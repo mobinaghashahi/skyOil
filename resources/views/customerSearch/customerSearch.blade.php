@@ -20,6 +20,7 @@
                 </div>
                 <div>
                     <p style="text-align: center;direction: rtl; color: #dcb700">کاربر گرامی؛ برای جست و جوی تمام مشتریان، فیلد بالا را خالی بگذارید.</p>
+                    <p style="text-align: center;direction: rtl; color: #dcb700">برای جست و جو، از نام، نام خانوادگی، شماره تماس و یا کد ملی استفاده کنید.</p>
                 </div>
             </form>
         </div>
