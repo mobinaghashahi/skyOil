@@ -127,14 +127,18 @@ class admin extends Controller
     {
         return Excel::download(new UsersExport, 'گزارش کلی.xlsx');
     }
-    public function reportCustomer(Request $request){
-        $customer = Customer::where('meliCode', $request->meliCode)->first();
-        if ($customer == null)
-            return redirect('admin/customerSearch/')->with('error', 'کد ملی وارد شده وجود ندارد');
-        return view('reportCustomer',['customerRewards'=>Customer::join('reward','reward.custumer_id','=','customer.id')->where('meliCode',$request->meliCode)->get(),'customerBuy'=>Customer::join('oilbuy','oilbuy.custumer_id','=','customer.id')->where('meliCode',$request->meliCode)->get(),'customer'=>Customer::where('meliCode',$request->meliCode)->get()]);
+    public function reportPanelCustomer(Request $request){
+        return view('reportPanelCustomer',['customer'=>Customer::where('meliCode','LIKE','%'.$request->search.'%')
+            ->orWhere('phoneNumber','LIKE','%'.$request->search.'%')
+            ->orWhere('name','LIKE','%'.$request->search.'%')
+            ->orWhere('family','LIKE','%'.$request->search.'%')
+            ->get()]);
     }
-    public function customerSearch(){
-        return view('customerSearch');
+    public function reportCustomer($id){
+        return view('reportCustomer',['customerRewards'=>Customer::join('reward','reward.custumer_id','=','customer.id')->where('customer.id','=',$id)->get(),'customerBuy'=>Customer::join('oilbuy','oilbuy.custumer_id','=','customer.id')->where('customer.id',$id)->get(),'customer'=>Customer::where('customer.id',$id)->get()]);
+    }
+    public function customerReportSearch(){
+        return view('customerReportSearch');
     }
 
     public function oilChangeView()

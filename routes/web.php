@@ -40,6 +40,7 @@ Route::prefix('/admin')->middleware('auth')->group(function () {
     Route::post('/oilChangeUpdate/{id}',[admin::class,'oilChangeUpdate']);
     Route::get('/reward',[admin::class,'rewardView']);
     Route::post('/reward',[admin::class,'addReward']);
+    Route::post('/reportPanelCustomer',[admin::class,'reportPanelCustomer']);
     Route::post('/reportCustomer/{id}',[admin::class,'reportCustomer']);
-    Route::get('/customerSearch',[admin::class,'customerSearch']);
+    Route::get('/customerReportSearch',[admin::class,'customerReportSearch']);
 });

@@ -37,7 +37,7 @@
             </div>
             <div class="col-6" style="display: flex;justify-content: center;">
                 <div class="col-10 dashboardBox">
-                    <a class="" href="/admin/customerSearch">
+                    <a class="" href="/admin/customerReportSearch">
                         <div class="col-12" style="display: flex;justify-content: center">
                             <img src="image/reportDetailsPerson.png" width="30" height="30">
                         </div>
