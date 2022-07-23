@@ -141,19 +141,29 @@ class admin extends Controller
         return view('customerReportSearch');
     }
 
-    public function oilChangeView()
+    public function customerOilChangeSearch()
+    {
+        return view('customerOilChangeSearch');
+    }
+
+    public function oilPanelSearch(Request $request)
+    {
+        return view('oilPanelSearch',['customer'=>Customer::where('meliCode','LIKE','%'.$request->search.'%')
+        ->orWhere('phoneNumber','LIKE','%'.$request->search.'%')
+        ->orWhere('name','LIKE','%'.$request->search.'%')
+        ->orWhere('family','LIKE','%'.$request->search.'%')
+        ->get()]);
+    }
+    public function oilChange($id)
     {
         Verta::setStringformat('Y/n/j');
         $v=verta();
-        $v->timezone('Asia/Tehran');
-        return view('oilChange',['toDay'=>$v]);
+        return view('oilChange',['toDay'=>$v,'customer'=>Customer::where('id',$id)->get()]);
     }
 
     public function oilChangeUpdate(Request $request)
     {
-
         $valid = $request->validate([
-            'meliCode'=>'required|max:10|min:10',
             'dateChangeOil'=>'required',
             'expirationDay'=>'required',
             'oilName'=>'required',
@@ -162,10 +172,9 @@ class admin extends Controller
             'kilometerProposed'=>'required|int|min:0',
         ]);
 
-
-        $customer = Customer::where('meliCode', $request->meliCode)->first();
+        $customer = Customer::where('id', $request->id)->first();
         if ($customer == null)
-            return redirect('admin/oilChange/')->with('error', 'کد ملی وارد شده وجود ندارد');
+            return redirect('admin/oilChange/')->with('error', 'مشتری با این مشخصات وجود ندارد');
 
         $customer->update([
             'smsSent' => 0,
@@ -184,7 +193,7 @@ class admin extends Controller
         $oilBuy->save();
 
         $msg='تاریخ تعویض روغن کاربر با موفقیت ویرایش شد.';
-        return redirect('admin/oilChange/')->with('msg', $msg);
+        return redirect('admin/customerOilChangeSearch')->with('msg', $msg);
     }
     public function rewardView()
     {
