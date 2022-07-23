@@ -7,7 +7,7 @@
     <link href="/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="/css/bootstrap-theme.min.css" />
     <link rel="stylesheet" href="/css/jquery.Bootstrap-PersianDateTimePicker.css" />
-
+    <link rel="icon" href="/image/icon.png">
     <script src="/js/jquery-3.1.0.min.js" type="text/javascript"></script>
     <script src="/js/bootstrap.min.js" type="text/javascript"></script>
 </head>
