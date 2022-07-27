@@ -52,6 +52,10 @@
                     <div class="col-6 addCostumerFild">
                         <input class="input" name="kilometerProposed" placeholder="کارکرد پیشنهادی" type="text" value="@yield('kilometerProposed')">
                     </div>
+                    <div class="col-6 addCostumerFild">
+                        <input type="checkbox" id="sendSms" name="sendSms" value="send">
+                        <label for="vehicle1" style="text-align: center;padding: 1px;margin:4px;color: #ffc700;filter: drop-shadow(0px 0px 5px white)"> ارسال پیامک ثبت نام</label><br>
+                    </div>
                     <div class="col-12" style="display: flex;justify-content: center;margin: 20px 0px 20px 0px">
                         <input style="width: 150px;height: 40px;border-radius: 5px" name="enter" type="submit"
                                value="@yield('submitName')">

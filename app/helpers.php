@@ -81,3 +81,8 @@ function sumScorePay($customerId){
     }
     return $allScorePay;
 }
+
+function sendSmsWelcome($number){
+    $message='به مجتمع فنی و تخصصی سرویس روغن آسمان خوش آمدید.';
+    sendSMS($number,$message);
+}

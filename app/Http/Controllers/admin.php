@@ -33,6 +33,11 @@ class admin extends Controller
             'liter'=>'required|int|min:0',
         ]);
 
+        //ارسال اس ام اس خوش آمد گویی
+        if($request->sendSms=='send'){
+            sendSmsWelcome($request->phoneNumber);
+        }
+
         $customer = Customer::where('meliCode', $request->meliCode)
             ->orWhere('phoneNumber', $request->phoneNumber)
             ->first();
