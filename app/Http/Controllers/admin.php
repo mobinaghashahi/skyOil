@@ -38,9 +38,9 @@ class admin extends Controller
             sendSmsWelcome($request->phoneNumber);
         }
 
-        $customer = Customer::where('meliCode', $request->meliCode)
-            ->orWhere('phoneNumber', $request->phoneNumber)
-            ->first();
+
+        $customer = Customer::where('phoneNumber', $request->phoneNumber)->first();
+
         if ($customer)
             return redirect('admin/addCustomer/')->with('error', 'این مشتری قبلا افزوده شده است.');
 
