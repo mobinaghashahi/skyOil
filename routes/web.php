@@ -19,17 +19,17 @@ use App\Http\Controllers\sendSMS;
 
 Route::get('/checkSendSMS',[sendSMS::class,'dailyCheck']);
 
-Route::get('/',[loginController::class,'showIndex']);
+Route::get('/',[loginController::class,'showIndex'])->name('home');
 
-Route::get('/logout',[loginController::class,'logout']);
+Route::get('/logout',[loginController::class,'logout'])->name('logOut');
 Route::get('/login',[loginController::class, 'viewLoginForm'])->middleware(['guest'])->name('login');;
 Route::post('/login',[loginController::class, 'login']);
 
-Route::get('/dashboard',[Dashboard::class,'viewDashboard'])->middleware('auth');
+Route::get('/dashboard',[Dashboard::class,'viewDashboard'])->middleware('auth')->name('dashboard');
 
 Route::prefix('/admin')->middleware('auth')->group(function () {
-    Route::get('/addCustomer',[admin::class,'showAddCostumerForm']);
-    Route::post('/addCustomer',[admin::class,'addCostumer']);
+    Route::get('/addCustomer',[admin::class,'showAddCostumerForm'])->name('showAddCustomerForm');
+    Route::post('/addCustomer',[admin::class,'addCostumer'])->name('addCustomer');
     Route::post('/editPanelCustomer',[admin::class,'editPanelCustomer']);
     Route::get('/customerEditSearch',[admin::class,'customerEditSearch']);
     Route::get('/editCustomer/{id}',[admin::class,'showEditCustomer']);
