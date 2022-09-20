@@ -30,8 +30,8 @@ Route::get('/dashboard',[Dashboard::class,'viewDashboard'])->middleware('auth')-
 Route::prefix('/admin')->middleware('auth')->group(function () {
     Route::get('/addCustomer',[admin::class,'showAddCostumerForm'])->name('showAddCustomerForm');
     Route::post('/addCustomer',[admin::class,'addCostumer'])->name('addCustomer');
-    Route::post('/editPanelCustomer',[admin::class,'editPanelCustomer']);
-    Route::get('/customerEditSearch',[admin::class,'customerEditSearch']);
+    Route::post('/editPanelCustomer',[admin::class,'editPanelCustomer'])->name('editPanelCustomer');
+    Route::get('/customerEditSearch',[admin::class,'customerEditSearch'])->name('customerEditSearch');;
     Route::get('/editCustomer/{id}',[admin::class,'showEditCustomer']);
     Route::post('/editCustomer/{id}',[admin::class,'editCustomer']);
     Route::delete('/deleteCustomer/{id}',[admin::class,'deleteCustomer']);
