@@ -28,14 +28,14 @@ class admin extends Controller
             'phoneNumber'=>'required|max:11|min:11',
             'dateChangeOil'=>'required',
             'expirationDay'=>'required|int|min:0',
-            'kilometerCurrent'=>'required|int|min:0',
             'kilometerProposed'=>'required|int|min:0',
             'liter'=>'required|int|min:0',
         ]);
 
         //ارسال اس ام اس خوش آمد گویی
         if($request->sendSms=='send'){
-            sendSmsWelcome($request->phoneNumber);
+            //امتیاز بر اساس مقدار لیتر روغن تعویضی توسط مشتری تعیین میشود.
+            sendSmsWelcome($request->phoneNumber,$request->name,$request->family,$request->liter);
         }
 
 
@@ -47,7 +47,7 @@ class admin extends Controller
         $customer=new Customer();
         $customer->name=$request->name;
         $customer->family=$request->family;
-        $customer->meliCode=$request->meliCode;
+        $customer->customerCode=$request->customerCode;
         $customer->carTag=$request->carTag;
         $customer->phoneNumber=$request->phoneNumber;
         $customer->carType=$request->carType;
@@ -68,7 +68,7 @@ class admin extends Controller
         return redirect('admin/addCustomer')->with('msg','کاربر با موفقیت افزوده شد');
     }
     function editPanelCustomer(Request $request){
-        return view('editPanelCustomer',['customer'=>Customer::where('meliCode','LIKE','%'.$request->search.'%')
+        return view('editPanelCustomer',['customer'=>Customer::where('customerCode','LIKE','%'.$request->search.'%')
             ->orWhere('phoneNumber','LIKE','%'.$request->search.'%')
             ->orWhere('name','LIKE','%'.$request->search.'%')
             ->orWhere('family','LIKE','%'.$request->search.'%')
@@ -106,7 +106,7 @@ class admin extends Controller
         $customer->update([
             'name'=>$request->name,
             'family'=>$request->family,
-            'meliCode'=>$request->meliCode,
+            'customerCode'=>$request->customerCode,
             'carTag'=>$request->carTag,
             'carType'=>$request->carType,
             'phoneNumber' => $request->phoneNumber,
@@ -133,7 +133,7 @@ class admin extends Controller
         return Excel::download(new UsersExport, 'گزارش کلی.xlsx');
     }
     public function reportPanelCustomer(Request $request){
-        return view('reportPanelCustomer',['customer'=>Customer::where('meliCode','LIKE','%'.$request->search.'%')
+        return view('reportPanelCustomer',['customer'=>Customer::where('customerCode','LIKE','%'.$request->search.'%')
             ->orWhere('phoneNumber','LIKE','%'.$request->search.'%')
             ->orWhere('name','LIKE','%'.$request->search.'%')
             ->orWhere('family','LIKE','%'.$request->search.'%')
@@ -153,7 +153,7 @@ class admin extends Controller
 
     public function oilPanelSearch(Request $request)
     {
-        return view('oilPanelSearch',['customer'=>Customer::where('meliCode','LIKE','%'.$request->search.'%')
+        return view('oilPanelSearch',['customer'=>Customer::where('customerCode','LIKE','%'.$request->search.'%')
         ->orWhere('phoneNumber','LIKE','%'.$request->search.'%')
         ->orWhere('name','LIKE','%'.$request->search.'%')
         ->orWhere('family','LIKE','%'.$request->search.'%')
@@ -218,7 +218,7 @@ class admin extends Controller
     }
     public function rewardPanelCustomer(Request $request)
     {
-        return view('rewardPanelCustomer',['customer'=>Customer::where('meliCode','LIKE','%'.$request->search.'%')
+        return view('rewardPanelCustomer',['customer'=>Customer::where('customerCode','LIKE','%'.$request->search.'%')
             ->orWhere('phoneNumber','LIKE','%'.$request->search.'%')
             ->orWhere('name','LIKE','%'.$request->search.'%')
             ->orWhere('family','LIKE','%'.$request->search.'%')
