@@ -82,7 +82,11 @@ function sumScorePay($customerId){
     return $allScorePay;
 }
 
-function sendSmsWelcome($number){
-    $message='به مجتمع فنی و تخصصی سرویس روغن آسمان خوش آمدید.';
+function sendSmsWelcome($number,$name,$family,$score){
+    $message='جناب آقای '.$name.' '.$family .' راننده عزیز و گرامی
+از اینکه ما را انتخاب کردید سپاسگزاریم
+حضور شما انگیزه ما برای بهتر انجام دادن است!
+مفتخریم که همیشه شما را بعنوان مشتری گرانقدر خود داشته باشیم.
+امتیاز فعلی شما: '.$score;
     sendSMS($number,$message);
 }
