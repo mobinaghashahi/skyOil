@@ -17,7 +17,7 @@ class CreateCustomer extends Migration
             $table->id();
             $table->string('name');
             $table->string('family');
-            $table->string('meliCode',10)->nullable();
+            $table->string('customerCode',10)->nullable();
             $table->string('carTag');
             $table->integer('kilometerCurrent')->default(0);
             $table->integer('kilometerPrevious')->default(0);
