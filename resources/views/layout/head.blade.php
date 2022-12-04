@@ -41,7 +41,7 @@
         </ul>
     </div>
     <div class="col-8" style="float: right;width: 66.66%">
-        <p style='font-size: 45px;color: #ffc800;font-family: "Bebas Neue Book";font-weight: bold;margin: 5px 5px 5px 15px;filter: drop-shadow(2px 2px 10px #ffffff)'>sky Oil Change</p>
+        <p class="title">sky Oil Change</p>
     </div>
 
 </div>

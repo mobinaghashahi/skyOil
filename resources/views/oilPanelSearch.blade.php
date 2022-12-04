@@ -29,10 +29,10 @@
 
                             </div></th>
                         <th>{{$user->phoneNumber}}</th>
-                        @if($user->meliCode==NULL)
+                        @if($user->customerCode==NULL)
                             <th style="background-color: #761c19">ناموجود</th>
                         @else
-                            <th>{{$user->meliCode}}</th>
+                            <th>{{$user->customerCode}}</th>
                         @endif
                         <th>{{$user->family}}</th>
                         <th>{{$user->name}}</th>

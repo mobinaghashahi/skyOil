@@ -15,9 +15,9 @@
                     <div class="col-4">
                         <a style="color: #0f0f0f;padding: 10px">شماره موبایل: {{$customer[0]->phoneNumber}}</a>
                     </div>
-                    @if($customer[0]->meliCode)
+                    @if($customer[0]->customerCode)
                     <div class="col-4">
-                        <a style="color: #0f0f0f;padding: 10px">کد ملی:  {{$customer[0]->meliCode}}</a>
+                        <a style="color: #0f0f0f;padding: 10px">کد ملی:  {{$customer[0]->customerCode}}</a>
                     </div>
                     @endif
                     <div class="col-4">

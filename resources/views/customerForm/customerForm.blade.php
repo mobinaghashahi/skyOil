@@ -19,7 +19,7 @@
                         <input class="input" name="family" placeholder="نام خانوادگی" type="text" value="@yield('family')">
                     </div>
                     <div class="col-6 addCostumerFild">
-                        <input class="input" name="meliCode" placeholder="کد ملی" type="text" value="@yield('meliCode')">
+                        <input class="input" name="customerCode" placeholder="کد مشتری" type="text" value="@yield('customerCode')">
                     </div>
                     <div class="col-6 addCostumerFild">
                         <input class="input" name="carTag" placeholder="شماره پلاک" type="text" value="@yield('carTag')">

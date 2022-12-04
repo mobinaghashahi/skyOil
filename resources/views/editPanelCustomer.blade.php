@@ -12,7 +12,7 @@
                 <tr>
                     <th class="firstRow">حذف و ادیت</th>
                     <th class="firstRow">شماره موبایل</th>
-                    <th class="firstRow">کد ملی</th>
+                    <th class="firstRow">کد مشتری</th>
                     <th class="firstRow">نام خانوادگی</th>
                     <th class="firstRow">نام</th>
                     <th class="firstRow">ردیف</th>
@@ -33,10 +33,10 @@
 
                             </div></th>
                         <th>{{$user->phoneNumber}}</th>
-                        @if($user->meliCode==NULL)
+                        @if($user->customerCode==NULL)
                         <th style="background-color: #761c19">ناموجود</th>
                         @else
-                        <th>{{$user->meliCode}}</th>
+                        <th>{{$user->customerCode}}</th>
                         @endif
                         <th>{{$user->family}}</th>
                         <th>{{$user->name}}</th>

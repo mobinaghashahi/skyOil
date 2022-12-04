@@ -12,7 +12,7 @@
                 @include('layout.queryMsg')
                 @include('layout.errorValidation')
                 <div class="col-12" style="display: flex;justify-content: center">
-                    <input class="input" name="search" placeholder="کد ملی، نام، شماره موبایل" type="text" style="text-align: center;margin: 20px 0px 20px 0px">
+                    <input class="input" name="search" placeholder="کد مشتری، نام، شماره موبایل" type="text" style="text-align: center;margin: 20px 0px 20px 0px">
                 </div>
                 <div class="col-12" style="display: flex;justify-content: center;margin: 20px 0px 20px 0px">
                     <input style="width: 150px;height: 40px;border-radius: 5px" name="enter" type="submit"
@@ -20,7 +20,7 @@
                 </div>
                 <div>
                     <p style="text-align: center;direction: rtl; color: #dcb700">کاربر گرامی؛ برای جست و جوی تمام مشتریان، فیلد بالا را خالی بگذارید.</p>
-                    <p style="text-align: center;direction: rtl; color: #dcb700">برای جست و جو، از نام، نام خانوادگی، شماره تماس و یا کد ملی استفاده کنید.</p>
+                    <p style="text-align: center;direction: rtl; color: #dcb700">برای جست و جو، از نام، نام خانوادگی، شماره تماس و یا کد مشتری استفاده کنید.</p>
                 </div>
             </form>
         </div>

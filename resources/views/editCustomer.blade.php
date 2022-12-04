@@ -18,8 +18,8 @@
 {{$customer->family}}
 @endsection
 
-@section('meliCode')
-{{$customer->meliCode}}
+@section('customerCode')
+{{$customer->customerCode}}
 @endsection
 
 @section('carTag')
