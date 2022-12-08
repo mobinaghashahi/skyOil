@@ -20,8 +20,8 @@ This program is made for an oil change that sends a message to customers to chan
   * Excel
   * Printable
 * Gift giving
-* Sending a welcome SMS to the customer
-* Sending an oil change reminder SMS to the customer
+* Sending welcome SMS to the customer
+* Sending oil change reminder SMS to the customer
 ***
 
 ## Images of the program environment
@@ -41,6 +41,14 @@ This program is made for an oil change that sends a message to customers to chan
 **Reporting Excel Export**
 
 ![plot](./imageProgram/4.png)
+
+**Printable report**
+
+![plot](./imageProgram/5.png)
+
+**Gift giving Page**
+
+![plot](./imageProgram/6.png)
 
 ## Visit This webSite
 http://myhomeiot.ir
