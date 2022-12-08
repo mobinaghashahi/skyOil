@@ -10,5 +10,37 @@
 
 # About project (skyOil)
 This program is made for an oil change that sends a message to customers to change their oil based on a series of parameters. this project made by Laravel
-# Visit This webSite
+## Features
+
+* Customer management
+  * Add Customer
+  * Delete Customer
+  * Edit Customer
+* Customer reporting
+  * Excel
+  * Printable
+* Gift giving
+* Sending a welcome SMS to the customer
+* Sending an oil change reminder SMS to the customer
+***
+
+## Images of the program environment
+
+**Index Page**
+
+![plot](./imageProgram/1.png)
+
+**Admin Panel Page**
+
+![plot](./imageProgram/2.png)
+
+**Add Customer Page**
+
+![plot](./imageProgram/3.png)
+
+**Reporting Excel Export**
+
+![plot](./imageProgram/4.png)
+
+## Visit This webSite
 http://myhomeiot.ir
